@@ -1,0 +1,45 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sky/core/constants/app_strings.dart';
+import 'package:sky/screens/sky_search_screen.dart';
+import 'package:sky/widgets/custom_app_bar.dart';
+
+import '../core/app_styles/app_styles.dart';
+import '../widgets/custom_elevated_button.dart';
+
+class SkyWelcomeScreen extends StatelessWidget {
+  const SkyWelcomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: customAppBar(),
+      body: Center(
+        child: Column(
+          spacing: 5.h,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              AppStrings.welcomeScreenFirstText,
+              style: TextStyles.font20w700,
+            ),
+            Text(
+              AppStrings.welcomeScreenSecondText,
+              style: TextStyles.font15w500,
+            ),
+            CustomElevatedButton(
+              buttonText: AppStrings.welcomeScreenButtonText,
+              onPressed: () => Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const SkySearchScreen(),
+                ),
+                (_) => false,
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

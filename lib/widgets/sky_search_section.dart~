@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+import 'package:sky/core/app_colors/app_theme_colors.dart';
+import 'package:sky/widgets/custom_app_bar.dart';
+import 'package:sky/widgets/custom_elevated_button.dart';
+
+import '../core/app_styles/app_styles.dart';
+import '../core/constants/app_strings.dart';
+
+class SkySearchSection extends StatelessWidget {
+  const SkySearchSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: customAppBar(),
+      body: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Form(
+          child: Column(
+            spacing: 10.h,
+            children: [
+              TextFormField(
+                decoration: InputDecoration(
+                  prefixIcon: const Icon(
+                    Icons.location_on_outlined,
+                    color: AppColors.tffcontentColor,
+                  ),
+                  border: const OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(12),
+                    ),
+                  ),
+                  filled: true,
+                  fillColor: AppColors.tffFilledColor,
+                  focusedBorder: const OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(12),
+                    ),
+                  ),
+                  hintText: AppStrings.searchScreenTFFieldHintText,
+                  hintStyle: TextStyles.font15w700.copyWith(
+                    color: AppColors.tffcontentColor,
+                  ),
+                ),
+              ),
+              CustomElevatedButton(
+                buttonText: AppStrings.searchScreenButtonText,
+                onPressed: () {},
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

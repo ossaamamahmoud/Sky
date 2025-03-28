@@ -1,0 +1,6 @@
+part of 'ghf_cubit.dart';
+
+@immutable
+sealed class GhfState {}
+
+final class GhfInitial extends GhfState {}

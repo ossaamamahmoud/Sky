@@ -1,0 +1,13 @@
+import 'package:flutter/material.dart';
+
+class SkyWeatherInfoScreen extends StatelessWidget {
+  const SkyWeatherInfoScreen({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(
+        child: Text('SkyWeatherInfoScreen'),
+      ),
+    );
+  }
+}
