@@ -1,16 +1,21 @@
-# sky
+# Sky
 
-A new Flutter project.
+Sky is a sleek Flutter weather app that offers real-time temperature insights and detailed 3-day forecasts—including air quality, humidity, and natural timing details. Built using the MVVM architecture for maintainability and scalability, Sky ensures seamless search and smooth access for an optimal user experience.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **3-Day Forecasts:**  
+  Get detailed weather forecasts including air quality and humidity for the next three days.
 
-A few resources to get you started if this is your first Flutter project:
+- **Real-Time Temperature Insights:**  
+  Stay updated with current temperature and weather conditions.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Seamless Search:**  
+  Quickly search for weather updates in your desired locations.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Theming:**  
+  Toggle effortlessly between dark and light themes for a personalized experience.
+
+## Architecture
+
+Sky is built using the MVVM architecture, ensuring a clear separation of concerns that makes the app easy to maintain and extend.
